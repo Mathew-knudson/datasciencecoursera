@@ -1,0 +1,7 @@
+---
+title: "README"
+author: "Mat Knudson"
+date: "12/27/2019"
+output: html_document
+---
+In this GitHub Repo, you will find an R script called "Run_Analysis" that, assuming you have the given dataset in your working directory, will generate tidydata.csv, which is the final output of this project. The file CodeBook provides detailed explanations of the processes carried out in Run_Analysis and what the final output represents. 

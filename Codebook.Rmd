@@ -1,0 +1,20 @@
+---
+title: "CodeBook"
+author: "Mat Knudson"
+date: "12/27/2019"
+output: html_document
+---
+
+## The Data and Output
+
+The data used are observations of Samsung smartphone accelerometers as subjects performed different activities. The data presented in the output "tidydata" are means for the mean and standard deviation of each measure taken, for each subject performing each activity.
+
+Label refers to the activity as labeled by the experiment operators, and is a categorical variable with 6 levels. Subject refers to the numerical id assigned to each subject whom participated. All of the remaining variables are averages of the reported measure (the column name), across all observations from the same subject and activity.
+
+## Transformations
+
+The data were originally in 7 files: A set of raw data for both the test group and training group, a set of labels for both the test and training group, a set of subjects, and a set of variable names. First, the raw data were imported along with the variable names, and the variable names were applied to the dataset. Next, activity labels were imported and applied to each data set. Finally, subject data was imported and added to each dataset. At this point, I merged the two datasets with rbind to create a single dataframe with all observations of all variables.
+
+After this, all variables other than mean() and std() for each feature were dropped, as requested. To improve clarity, the numerical activity labels imported from the given files were replaced by words describing each activity, using the factor() command.
+
+Finally, the data were grouped by activity and subject, and then the summarize_all command was used to generate means for each variable, for each activity-subject combination. This was written to the tidycsv.
