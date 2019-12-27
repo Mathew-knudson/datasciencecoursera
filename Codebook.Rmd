@@ -17,4 +17,4 @@ The data were originally in 7 files: A set of raw data for both the test group a
 
 After this, all variables other than mean() and std() for each feature were dropped, as requested. To improve clarity, the numerical activity labels imported from the given files were replaced by words describing each activity, using the factor() command.
 
-Finally, the data were grouped by activity and subject, and then the summarize_all command was used to generate means for each variable, for each activity-subject combination. This was written to the tidycsv.
+Finally, the data were grouped by activity and subject, and then the summarize_all command was used to generate means for each variable, for each activity-subject combination. This was written to the tidydata output file.

@@ -39,4 +39,4 @@ dataset$label <- factor(dataset$label, labels = c("Walking","Walking_Upstairs","
 dataset <- group_by(dataset,label,subject)
 #create final output
 tidydataset <- summarize_all(dataset,funs(mean))
-write.csv(tidydataset, file="tidydata.csv")
+write.table(tidydataset, file="tidydata.txt",row.name=FALSE)
